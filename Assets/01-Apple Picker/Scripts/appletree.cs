@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Appletree : MonoBehaviour {  
-
+public class Appletree : MonoBehaviour {
+public static float bottomY = -20f;
     [Header("Set in Inspector")]
     // Prefab for instantiating apples
     public GameObject ApplePrefab;
@@ -36,10 +36,11 @@ public class Appletree : MonoBehaviour {
             speed = Mathf.Abs(speed);
         } // Move right // b 
 
-        else if (pos.x > leftAndRightEdge)
-        { // c
+            else if (pos.x > leftAndRightEdge)
+            { // c
             speed = -Mathf.Abs(speed); // Move lef
-        }
+            }
+
     }
          
     
