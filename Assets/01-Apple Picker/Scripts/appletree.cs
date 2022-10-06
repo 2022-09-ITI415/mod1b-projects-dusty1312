@@ -8,7 +8,7 @@ public class Appletree : MonoBehaviour
     public GameObject ApplePrefab;
     public GameObject greenapplePrefab;
     // Speed at which the AppleTree moves
-    public float speed = 2f;
+    public float speed = 5f;
     // Distance where AppleTree turns around
     public float leftAndRightEdge = 20f;
     // Chance that the AppleTree will change directions
@@ -22,7 +22,22 @@ public class Appletree : MonoBehaviour
     void Update()
     {
         Vector3 pos = transform.position; // b
-        pos.x += speed * Time.deltaTime; // c
+        pos.x += speed * Time.deltaTime;
+        pos.x += 1.0f * 0.04f;
+        pos.x += 0.04f;
         transform.position = pos;
+
+        if (pos.x < -leftAndRightEdge)
+        {
+            speed = Mathf.Abs(speed); // Move right // b
+        }
+        else if (pos.x > leftAndRightEdge)
+        { // c
+            speed = -Mathf.Abs(speed); // Move lef
+        }
+        else if (Random.value < chanceToChangeDirections)
+        { // a
+            speed *= -1;
+        }
     }
 }
