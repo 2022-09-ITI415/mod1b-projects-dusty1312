@@ -63,6 +63,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5177368f34a7049961769a488f1bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ApplePrefab: {fileID: 7779362047543499182, guid: 289e4c30879d330439a66bf199cbec9e, type: 3}
+  greenapplePrefab: {fileID: 5029553463305626213, guid: 1d049d2d24f3fe141a10e46ad871e573, type: 3}
+  speed: 5
+  leftAndRightEdge: 20
+  chanceToChangeDirections: 0.2
+  secondsBetweenAppleDrops: 1
 --- !u!1 &1039282458469059399
 GameObject:
   m_ObjectHideFlags: 0
