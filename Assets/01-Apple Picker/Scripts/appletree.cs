@@ -7,7 +7,7 @@ public static float bottomY = -20f;
     [Header("Set in Inspector")]
     // Prefab for instantiating apples
     public GameObject ApplePrefab;
-    public GameObject greenapplePrefab;
+   
     // Speed at which the AppleTree moves
     public float speed = 1f;
     // Distance where AppleTree turns around
@@ -57,11 +57,9 @@ public static float bottomY = -20f;
         GameObject Apple = Instantiate<GameObject>(ApplePrefab); // c
         Apple.transform.position = transform.position; // d
         Invoke("DropApple", secondsBetweenAppleDrops);
-
-        GameObject greenapple = Instantiate<GameObject>(greenapplePrefab); // c
-        Apple.transform.position = transform.position; // d
-        Invoke("DropApple", secondsBetweenAppleDrops);// e
     }
+
+       
 }
 
 
