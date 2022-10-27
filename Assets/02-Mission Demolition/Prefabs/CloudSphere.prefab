@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 553747183680755219}
   - component: {fileID: 2220855006695539304}
   - component: {fileID: 6205906928869523750}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: CloudSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
