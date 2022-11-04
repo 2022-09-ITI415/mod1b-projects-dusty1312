@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.UI; // a
+using UnityEngine.UI;
+using TMPro;// a
 public enum GameMode
 { // b
     idle,
@@ -11,9 +12,9 @@ public class MissionDemolition : MonoBehaviour
 {
     static private MissionDemolition S; // a private Singleton
     [Header("Set in Inspector")]
-    public Text uitLevel; // The UIText_Level Text
-    public Text uitShots; // The UIText_Shots Text
-    public Text uitButton; // The Text on UIButton_View
+    public TextMeshProUGUI uitLevel; // The UIText_Level Text
+    public TextMeshProUGUI uitShots; // The UIText_Shots Text
+    public TextMeshProUGUI uitButton; // The Text on UIButton_View
     public Vector3 castlePos; // The place to put castles
     public GameObject[] castles; // An array of the castles
     [Header("Set Dynamically")]
@@ -25,6 +26,7 @@ public class MissionDemolition : MonoBehaviour
     public string showing = "Show Slingshot"; // FollowCam mode
     void Start()
     {
+        
         S = this; // Define the Singleton
         level = 0;
         levelMax = castles.Length;
